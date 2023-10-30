@@ -1,0 +1,77 @@
+html, body {
+  font-size: 16px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    20deg,
+    #fff 10%,
+    rgb(245, 245, 245) 30%,
+    /* Cambia este valor para hacer la transición más suave */ rgb(225, 225, 245) 50%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245) 80%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245)100%
+  );
+}
+.App {
+  text-align: center;
+  position: fixed;
+  background: linear-gradient(
+    20deg,
+    #fff 10%,
+    rgb(245, 245, 245) 30%,
+    /* Cambia este valor para hacer la transición más suave */ rgb(225, 225, 245) 50%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245) 80%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245)100%
+  );
+}
+
+#tsparticles {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(70, 70, 70, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgba(240, 240, 240, 0.7), rgba(180,180,180,0.8));
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  animation: blink 1s ease infinite;
+  background: linear-gradient(to top, rgba(244, 244, 244, 0.8), rgba(18,18,32,0.6));
+  border-radius: 12px;
+}
+.lazy-load-image-background.blur {
+  filter: blur(15px);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  filter: blur(0);
+  transition: filter .3s;
+}
+
+.lazy-load-image-background.blur > img {
+  opacity: 0;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
